@@ -1,5 +1,4 @@
 import React from 'react';
-
 class ErrorBoundary extends React.Component {
   state = { hasError: false, error: null };
   static getDerivedStateFromError(error) {
@@ -8,6 +7,7 @@ class ErrorBoundary extends React.Component {
       error,
     };
   }
+
   render() {
     if (this.state.hasError) {
       return this.props.fallback;
